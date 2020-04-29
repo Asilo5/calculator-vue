@@ -2,7 +2,7 @@
   <section class="calculator">
       <div class="display">{{ current || '0' }}</div>
       <button @click="clear">AC</button>
-      <button>+/-</button>
+      <button @click="sign">+/-</button>
       <button>%</button>
       <button class="operator">÷</button>
       <button>7</button>
@@ -33,6 +33,10 @@ export default {
   methods : {
     clear () {
       this.current = '';
+    },
+
+    sign () {
+      this.current = this.current.charAt(0) === '-' ? this.current.slice(1) : `-${this.current}`;
     }
   }
 }
