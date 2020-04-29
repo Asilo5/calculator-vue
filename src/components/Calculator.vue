@@ -67,6 +67,16 @@ export default {
     background-color: rgb(202, 194, 194);
     border: none;
     color: white;
+    transition: transform 1s;
+  }
+
+  button:hover {
+    background-color: #243E36;
+  }
+
+  button:active {
+    background-color: #243E36;
+    transform: scale(-2);
   }
 
   .operator {
