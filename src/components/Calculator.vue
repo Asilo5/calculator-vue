@@ -65,7 +65,7 @@ export default {
     margin: 5px;
     cursor: pointer;
     background-color: rgb(202, 194, 194);
-    border: none;
+    border: 1px solid black;
     color: white;
     transition: transform 1s;
   }
@@ -76,12 +76,12 @@ export default {
 
   button:active {
     background-color: #243E36;
-    transform: scale(-2);
+    transform: scale(-1);
   }
 
   .operator {
     background-color: #C2A83E;
     color: white;
-    border: none;
+    border: 1px solid black;
   }
 </style>
