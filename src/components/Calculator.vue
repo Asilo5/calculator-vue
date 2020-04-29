@@ -1,6 +1,6 @@
 <template>
   <section class="calculator">
-      <div class="display">8njkfdnvjkdnvj</div>
+      <div class="display">{{ current }}</div>
       <button>AC</button>
       <button>+/-</button>
       <button>%</button>
@@ -25,7 +25,11 @@
 
 <script>
 export default {
- 
+  data () {
+    return {
+      current: 0
+    }
+  }
 }
 </script>
 
@@ -53,6 +57,7 @@ export default {
     margin: 10px;
     padding: 5px;
     background-color: white;
+    text-align: end;
   }
 
   .zero {
