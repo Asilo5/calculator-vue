@@ -4,22 +4,22 @@
       <button>AC</button>
       <button>+/-</button>
       <button>%</button>
-      <button>÷</button>
+      <button class="operator">÷</button>
       <button>7</button>
       <button>8</button>
       <button>9</button>
-      <button>x</button>
+      <button class="operator">x</button>
       <button>4</button>
       <button>5</button>
       <button>6</button>
-      <button>-</button>
+      <button class="operator">-</button>
       <button>1</button>
       <button>2</button>
       <button>3</button>
-      <button>+</button>
+      <button class="operator">+</button>
       <button class="zero">0</button>
       <button>.</button>
-      <button>=</button>
+      <button class="operator">=</button>
   </section >
 </template>
 
@@ -62,5 +62,11 @@ export default {
     border-radius: 10px;
     margin: 5px;
     cursor: pointer;
+  }
+
+  .operator {
+    background-color: chocolate;
+    color: white;
+    border: none;
   }
 </style>
