@@ -1,7 +1,7 @@
 <template>
   <section class="calculator">
-      <div class="display">{{ current }}</div>
-      <button>AC</button>
+      <div class="display">{{ current || '0' }}</div>
+      <button @click="clear">AC</button>
       <button>+/-</button>
       <button>%</button>
       <button class="operator">÷</button>
@@ -27,7 +27,12 @@
 export default {
   data () {
     return {
-      current: 0
+      current: '',
+    }
+  },
+  methods : {
+    clear () {
+      this.current = '';
     }
   }
 }
