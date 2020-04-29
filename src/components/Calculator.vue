@@ -1,9 +1,9 @@
 <template>
   <section class="calculator">
-      <div class="display">8njkfdnvjkdnvj</div>
-      <button>AC</button>
-      <button>+/-</button>
-      <button>%</button>
+      <div class="display">{{ current || '0' }}</div>
+      <button @click="clear">AC</button>
+      <button @click="sign">+/-</button>
+      <button @click="percent">%</button>
       <button class="operator">÷</button>
       <button>7</button>
       <button>8</button>
@@ -25,7 +25,24 @@
 
 <script>
 export default {
- 
+  data () {
+    return {
+      current: '',
+    }
+  },
+  methods : {
+    clear () {
+      this.current = '';
+    },
+
+    sign () {
+      this.current = this.current.charAt(0) === '-' ? this.current.slice(1) : `-${this.current}`;
+    },
+
+    percent () {
+       this.current = `${parseFloat(this.current) / 100}`;
+    }
+  }
 }
 </script>
 
@@ -53,6 +70,7 @@ export default {
     margin: 10px;
     padding: 5px;
     background-color: white;
+    text-align: end;
   }
 
   .zero {
