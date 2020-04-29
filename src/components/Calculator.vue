@@ -42,6 +42,7 @@ export default {
     border: 2px solid black;
     border-radius: 15px;
     padding: 10px;
+    box-shadow: -11px 15px 29px 0px rgba(0,0,0,0.75);
   }
 
   .display {
