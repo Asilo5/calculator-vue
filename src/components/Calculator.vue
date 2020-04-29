@@ -43,6 +43,7 @@ export default {
     border-radius: 15px;
     padding: 10px;
     box-shadow: -11px 15px 29px 0px rgba(0,0,0,0.75);
+    background-color: #7CA982;
   }
 
   .display {
@@ -51,6 +52,7 @@ export default {
     border-radius: 2px;
     margin: 10px;
     padding: 5px;
+    background-color: white;
   }
 
   .zero {
@@ -62,10 +64,13 @@ export default {
     border-radius: 10px;
     margin: 5px;
     cursor: pointer;
+    background-color: rgb(202, 194, 194);
+    border: none;
+    color: white;
   }
 
   .operator {
-    background-color: chocolate;
+    background-color: #C2A83E;
     color: white;
     border: none;
   }
