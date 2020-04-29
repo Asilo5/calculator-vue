@@ -1,25 +1,25 @@
 <template>
   <section class="calculator">
       <div class="display">8njkfdnvjkdnvj</div>
-      <div>AC</div>
-      <div>+/-</div>
-      <div>%</div>
-      <div>÷</div>
-      <div>7</div>
-      <div>8</div>
-      <div>9</div>
-      <div>x</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>-</div>
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>+</div>
-      <div>0</div>
-      <div>.</div>
-      <div>=</div>
+      <button>AC</button>
+      <button>+/-</button>
+      <button>%</button>
+      <button>÷</button>
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button>x</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>-</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>+</button>
+      <button class="zero">0</button>
+      <button>.</button>
+      <button>=</button>
   </section >
 </template>
 
@@ -36,10 +36,30 @@ export default {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(50px, auto);
+    width: 30%;
+    height: 10em;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 10px;
   }
 
   .display {
     grid-column: 1 / 5; /* start at 1 end after column 4 */
-    
+    border: 1px solid black;
+    border-radius: 2px;
+    margin: 10px;
+    padding: 5px;
+  }
+
+  .zero {
+    grid-column: 1 / 3;
+  }
+
+  button {
+    font-size: 40px;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
   }
 </style>
