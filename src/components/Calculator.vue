@@ -75,6 +75,7 @@ export default {
     padding: 5px;
     background-color: white;
     text-align: end;
+    overflow: auto;
   }
 
   .zero {
