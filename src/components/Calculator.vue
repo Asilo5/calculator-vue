@@ -4,22 +4,22 @@
       <button @click="clear">AC</button>
       <button @click="sign">+/-</button>
       <button @click="percent">%</button>
-      <button class="operator">÷</button>
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button class="operator">x</button>
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button class="operator">-</button>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button class="operator">+</button>
-      <button class="zero">0</button>
-      <button>.</button>
-      <button class="operator">=</button>
+      <button @click="divide" class="operator">÷</button>
+      <button @click="append('7')">7</button>
+      <button @click="append('8')">8</button>
+      <button @click="append('9')">9</button>
+      <button @click="times" class="operator">x</button>
+      <button @click="append('4')">4</button>
+      <button @click="append('5')">5</button>
+      <button @click="append('6')">6</button>
+      <button @click="minus" class="operator">-</button>
+      <button @click="append('1')">1</button>
+      <button @click="append('2')">2</button>
+      <button @click="append('3')">3</button>
+      <button @click="add" class="operator">+</button>
+      <button @click="append('0')" class="zero">0</button>
+      <button @click="dot">.</button>
+      <button @click="equal" class="operator">=</button>
   </section >
 </template>
 
@@ -28,6 +28,9 @@ export default {
   data () {
     return {
       current: '',
+      previous: null,
+      operator: null,
+      operatorClicked: false
     }
   },
   methods : {
@@ -41,6 +44,50 @@ export default {
 
     percent () {
        this.current = `${parseFloat(this.current) / 100}`;
+    },
+
+    append (number) {
+      if(this.operatorClicked) {
+        this.current = '';
+        this.operatorClicked = false;
+      }
+       this.current = `${this.current}${number}`;
+    },
+
+    dot () {
+      if(this.current.indexOf('.') === -1) {
+         this.append('.'); 
+      }
+    },
+
+    setPrevious () {
+       this.previous = this.current;
+       this.operatorClicked = true;
+    },
+
+    divide () {
+       this.operator = (a, b) => a / b * 100;
+       this.setPrevious();
+    },
+
+    times () {
+       this.operator = (a, b) => a * b;
+       this.setPrevious();
+    },
+
+    add () {
+       this.operator = (a, b) => a + b;
+       this.setPrevious();
+    },
+
+    minus () {
+       this.operator = (a, b) => a - b;
+       this.setPrevious();
+    },
+
+    equal () {
+      this.current = `${this.operator(parseFloat(this.current), parseFloat(this.previous))}`;
+      this.previous = null;
     }
   }
 }
@@ -71,6 +118,7 @@ export default {
     padding: 5px;
     background-color: white;
     text-align: end;
+    overflow: auto;
   }
 
   .zero {
