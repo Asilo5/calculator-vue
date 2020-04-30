@@ -1,4 +1,4 @@
-# Vue Calculator
+# Vue Calculator 🧮
 
 Simple small app built to practice more of Vue.js. Adds, divides, multiplies, and subtracts numbers.
 
