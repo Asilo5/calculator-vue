@@ -20,7 +20,7 @@ Vue Calculator was built using:
   - HTML
   - CSS
   
-![image of Spotivue](https://github.com/Asilo5/calculator-vue/blob/master/Screenshot%202020-04-30%20at%2016.36.28.png)
-![image of Spotivue](https://github.com/Asilo5/calculator-vue/blob/master/Screenshot%202020-04-30%20at%2016.36.01.png)
-![image of Spotivue](https://github.com/Asilo5/calculator-vue/blob/master/Screenshot%202020-04-30%20at%2016.35.42.png)
+![image of Vue Calculator](https://github.com/Asilo5/calculator-vue/blob/master/Screenshot%202020-04-30%20at%2016.36.28.png)
+![image of Vue Calculator](https://github.com/Asilo5/calculator-vue/blob/master/Screenshot%202020-04-30%20at%2016.36.01.png)
+![image of Vue Calculator](https://github.com/Asilo5/calculator-vue/blob/master/Screenshot%202020-04-30%20at%2016.35.42.png)
 
